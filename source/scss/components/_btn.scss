@@ -141,6 +141,28 @@ button.button {
   }
 }
 
+.profit-button{ 
+    border-radius: 12px;
+    background-color: var(--color-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 23px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 131%;
+    color: var(--color-dark-blue);
+    padding: 9px 23px;
+    transition: all .4s ease;
+
+    &:hover{
+      background-color:  var(--color-white);
+      color: var(--color-blue);
+    }
+
+}
+
 .white-button{
   font-family: var(--font-family-beausans);
   font-weight: 500;

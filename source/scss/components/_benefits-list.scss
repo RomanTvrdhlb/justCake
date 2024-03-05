@@ -3,6 +3,11 @@
     align-items: flex-start;
     justify-content: space-between;
 
+    @media (min-width: 1240px){
+        justify-content: flex-start;
+        grid-gap: clamp(25px, 4.7009vw, 55px);
+    }
+
     @media (min-width: 767px) and (max-width: 1024px) {
         grid-gap: 70px;
         padding: 0 30px;

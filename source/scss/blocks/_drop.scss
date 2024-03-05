@@ -48,7 +48,7 @@
     &__box{
         display: flex;
         flex-direction: column;
-        grid-gap: clamp(21px, 3.5897vw, 42px);
+        grid-gap: clamp(21px, 4.5299vw, 53px);
 
         @media (min-width: 576px) and (max-width: 1024px){
             flex-direction: row;

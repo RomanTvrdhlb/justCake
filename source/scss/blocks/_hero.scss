@@ -5,7 +5,7 @@
     &__box{
         display: flex;
         flex-direction: column;
-        grid-gap: 50px;
+        grid-gap: 118px;
     }
 
     &__row{
@@ -15,9 +15,14 @@
     }
 
     &__col{
+        position: relative;
         display: flex;
         flex-direction: column;
         grid-gap: clamp(20px, 2.0513vw, 24px);
+
+        .start-button{
+            margin-top: 30px;
+        }
     }
 
     &__title{
@@ -50,8 +55,9 @@
       &__phone {
         z-index: -1;
         position: relative;
-        height: clamp(260px, 44.4444vw, 520px);
-        width: 445px;
+        width: Min(47.6068vw, 557px);
+        right: -55px;
+        top: 6px;
      
         &:after {
             content: "";
@@ -79,5 +85,11 @@
             background-size: contain;
         }
       }
+
+    .hero-profit{
+        position: absolute;
+        bottom: -4%;
+        left: -13%;
+    }
 }
 
