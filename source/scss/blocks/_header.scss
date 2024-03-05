@@ -1,0 +1,130 @@
+header {
+  position: relative;
+  padding: 25px 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 10px;
+
+  &__menu {
+    padding: 5px 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    background-color: var(--color-dark-bg);
+    border-radius: 100px;
+
+    a {
+      padding: 15px 20px;
+      background-color: transparent;
+      border-radius: 100px;
+      font-size: 14px;
+      line-height: 100%;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &.active,
+      &:hover {
+        background-color: var(--color-blue);
+      }
+    }
+
+    @media (max-width: 1024px){
+      display: none;
+  }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+  }
+
+  &__coin{
+    border-radius: 90px;
+    background: var(--color-dark);
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 10px;
+    gap: 8px;
+    margin-right: 5px;
+
+    &-value{
+      color: var(--color-grey-second);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      font-family: var(--font-family-beausans);
+      line-height: normal;
+
+      b{
+        color: var(--color-white);
+      }
+    }
+
+    &-icon{
+     display: flex;
+     align-items: center;
+    }
+  }
+
+  &__user{
+    border-radius: 99px;
+    grid-gap: 10px;
+    display: flex;
+    align-items: center;
+    background: var(--color-dark-bg);
+    padding: 7px;
+
+    &-value{
+      font-family: var(--font-family-beausans);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      color: var(--color-white);
+    }
+
+    &-icon{
+      width: 40px;
+      height: 40px;
+    }
+
+    &-btn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 4px 0 16px;
+      transition: all .4s;
+
+      &:hover{
+        filter: brightness(5);
+      }
+    }
+  }
+
+  &__btn {
+    position: relative;
+    grid-gap: 12px;
+    padding: clamp(15px, 1.953vw, 20px) clamp(20px, 4.883vw, 50px);
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--primary);
+    font-weight: 700;
+    background-color: var(--color-blue);
+    border-radius: 100px;
+    transition: all 0.4s ease;
+
+    &:hover {
+      background-color: var(--color-white);
+      color: var(--color-blue);
+    }
+  }
+}
+
+

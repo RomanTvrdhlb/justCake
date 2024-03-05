@@ -1,0 +1,48 @@
+.earn-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__item {
+    &:first-child {
+      @media (min-width: 768px) and (max-width: 1240px) {
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+
+        .earn-list__box {
+          flex-direction: row;
+          align-items: center;
+
+          .earn__title,
+          .earn-card {
+            flex-basis: 50%;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      &:nth-child(2) {
+        .earn-list__box {
+          flex-direction: column-reverse;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1240px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}

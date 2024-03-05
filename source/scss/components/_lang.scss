@@ -1,0 +1,121 @@
+.lang {
+  position: relative;
+  border: 1px solid transparent;
+  padding: 12px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+
+  @media screen and (max-width: 992px) {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    border: 1px solid var(--color-grey-stroke);
+  }
+
+  &.is-active {
+    border: 1px solid var(--color-grey-stroke);
+
+    .lang__arrow {
+      transform: scale(-100%);
+    }
+
+    .lang__body {
+      display: flex;
+      z-index: 10;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 6px;
+    cursor: pointer;
+  }
+
+  &__arrow {
+    fill: var(--color-black);
+    transition: all 0.4s ease;
+  }
+
+  &__current {
+    display: flex;
+    align-items: center;
+    grid-gap: 8px;
+    letter-spacing: 0.28px;
+    color: var(--color-black);
+    cursor: pointer;
+
+    svg {
+      border-radius: 2px;
+    }
+  }
+
+  &__body {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    display: none;
+    border-radius: 16px;
+    background-color: var(--color-white);
+    box-shadow: 0px 8px 24px 0px rgba(31, 28, 28, 0.12);
+    margin-top: 14px;
+    padding: 16px 0;
+
+    @media screen and (max-width: 992px) {
+      top: initial;
+      margin-top: initial;
+      margin-bottom: 14px;
+      bottom: 100%;
+    }
+  }
+
+  &__variants {
+    width: 100%;
+    max-height: 315px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--color-white);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--color-grey-stroke);
+      border-radius: 3px;
+    }
+  }
+
+  &__variants-item {
+    padding: 8px 24px;
+    letter-spacing: 0.32px;
+    color: var(--color-black);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:active {
+      background-color: #F2F5F9;
+    }
+  }
+
+  &__variant {
+    display: flex;
+    align-items: center;
+    grid-gap: 8px;
+    pointer-events: none;
+
+    svg {
+      border-radius: 2px;
+    }
+  }
+}

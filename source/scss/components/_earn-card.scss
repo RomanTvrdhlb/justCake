@@ -1,0 +1,150 @@
+.earn-card {
+  position: relative;
+  border-radius: 21px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  grid-gap: 12px;
+  padding: 30px clamp(25px, 2.6496vw, 31px);
+  background-color: #1b2145;
+  overflow: hidden;
+  z-index: 1;
+
+  @media (max-width: 390px) {
+    padding: 15px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='376' height='268' fill='none'%3E%3Crect width='376' height='268' fill='url(%23paint0_linear_134_1494)' rx='21'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_134_1494' x1='188' x2='188' y1='0' y2='162.5' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%232365FA'/%3E%3Cstop offset='1' stop-color='%232365FA' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    top: -10px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 110%;
+    pointer-events: none;
+  }
+
+  &__label {
+    font-family: var(--font-family-beausans);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--color-white);
+    background: var(--color-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 183px;
+    height: 46px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(25%, 15%) rotate(35deg);
+    display: none;
+  }
+
+  &__title {
+    font-family: var(--font-family-beausans);
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 100%;
+    color: var(--color-white);
+  }
+
+  p {
+    font-family: var(--font-family-beausans);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-grey);
+  }
+
+  &__image {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    width: 390px;
+    height: auto;
+    pointer-events: none;
+
+    img,
+    picture {
+      width: 100%;
+      height: auto;
+    }
+
+    &--invest {
+      width: 441px;
+      top: -54%;
+
+      @media (max-width: 576px){
+        width: 420px;
+      }
+    }
+
+    &--chain {
+      width: 250px;
+      top: -5%;
+      left: initial;
+      right: 0;
+      transform: translateX(1%);
+
+      @media (max-width: 576px){
+        width: 200px;
+        top: 4%;
+      }
+    }
+
+    &--shield {
+      width: 220px;
+      top: 2px;
+      left: initial;
+      right: 0;
+      transform: translateX(2%);
+
+      @media (max-width: 576px){
+        width: 200px;
+        top: 11%;
+      }
+    }
+
+    &--smart {
+      width: 297px;
+      top: -35%;
+    }
+  }
+
+  &--small {
+    height: 152px;
+
+    p {
+      max-width: 190px;
+    }
+
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='217' height='152' fill='none'%3E%3Cg filter='url(%23filter0_f_134_1519)'%3E%3Cellipse cx='206.5' cy='76' fill='%232365FA' rx='121.5' ry='76'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_134_1519' width='413' height='322' x='0' y='-85' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_134_1519' stdDeviation='42.5'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+      width: 217px;
+      left: initial;
+    }
+  }
+
+  &--mode {
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='376' height='270' fill='none'%3E%3Crect width='376' height='270' fill='url(%23paint0_linear_134_1511)' rx='21'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_134_1511' x1='188' x2='188' y1='0' y2='270' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%232365FA'/%3E%3Cstop offset='1' stop-color='%232365FA' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+    }
+  }
+
+  &.coming {
+    .earn-card__label {
+      display: flex;
+    }
+  }
+}

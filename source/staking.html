@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="En">
+@include('partials/head.html',{})
+
+<body>
+  <div class="wrapper">
+    @include('partials/header.html',{})
+
+    <main class="main">
+      <div class="container">
+        <section class="staking">
+          <div class="earnings">
+            <div class="earnings__heading">My staking earnings:</div>
+
+            <ul class="earnings__details">
+              <li class="earnings__detail">
+                <div class="earnings__detail-title">
+                  <span>Est. Positions</span>
+
+                  <div class="tooltip">
+                    <svg class="tooltip__icon" width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#tooltip'></use>
+                    </svg>
+
+                    <div class="tooltip__content">text</div>
+                  </div>
+                </div>
+
+                <span class="earnings__detail-value">0.2 ETH</span>
+              </li>
+              <li class="earnings__detail">
+                <div class="earnings__detail-title">
+                  <span>Total profit</span>
+
+                  <div class="tooltip">
+                    <svg class="tooltip__icon" width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#tooltip'></use>
+                    </svg>
+
+                    <div class="tooltip__content">text</div>
+                  </div>
+                </div>
+
+                <span class="earnings__detail-value">0 ETH</span>
+              </li>
+              <li class="earnings__detail">
+                <div class="earnings__detail-title">
+                  <span>Monthly profit</span>
+
+                  <div class="tooltip">
+                    <svg class="tooltip__icon" width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#tooltip'></use>
+                    </svg>
+
+                    <div class="tooltip__content">text</div>
+                  </div>
+                </div>
+
+                <span class="earnings__detail-value">0 ETH</span>
+              </li>
+            </ul>
+
+          </div>
+
+          <div class="rewards">
+            <span class="rewards__promo">EARN UP TO 5%</span>
+
+            <div class="rewards__top">
+              <div class="rewards__heading">My referral rewards</div>
+
+              <a class="rewards__more" href="#">
+                More details
+
+                <svg width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#angle-right'></use>
+                </svg>
+              </a>
+            </div>
+
+            <ul class="rewards__details">
+              <li class="rewards__detail">
+                <div class="rewards__detail-title">
+                  <span>Total referrals</span>
+
+                  <div class="tooltip">
+                    <svg class="tooltip__icon" width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#tooltip'></use>
+                    </svg>
+
+                    <div class="tooltip__content">text</div>
+                  </div>
+                </div>
+
+                <span class="rewards__detail-value">0 ETH</span>
+              </li>
+              <li class="rewards__detail">
+                <div class="rewards__detail-title">
+                  <span>Total profit</span>
+
+                  <div class="tooltip">
+                    <svg class="tooltip__icon" width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#tooltip'></use>
+                    </svg>
+
+                    <div class="tooltip__content">text</div>
+                  </div>
+                </div>
+
+                <span class="earnings__detail-value">0 ETH</span>
+              </li>
+              <li class="earnings__detail">
+                <div class="rewards__detail-title">
+                  <span>Aviable for claim</span>
+
+                  <div class="tooltip">
+                    <svg class="tooltip__icon" width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#tooltip'></use>
+                    </svg>
+
+                    <div class="tooltip__content">text</div>
+                  </div>
+                </div>
+
+                <span class="rewards__detail-value">0 ETH</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="calculate">
+            <form class="calc-form">
+              <div class="calc-form__title">
+                Add staking position
+
+                <div class="tooltip">
+                  <svg class="tooltip__icon" width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#question'></use>
+                  </svg>
+                  <div class="tooltip__content"></div>
+                </div>
+              </div>
+
+              <div class="calc-form__field">
+                <span class="calc-form__field-label">Stake amount:</span>
+                <div class="calc-form__field-inner">
+                  <span class="calc-form__field-icon">
+                    <svg width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#eth'></use>
+                    </svg>
+                  </span>
+                  <span class="calc-form__field-value">~$319.31</span>
+
+                  <div class="range" id="stake">
+                    <div class="range__inner">
+                      <input type="number" class="range__value" placeholder="0">
+                    </div>
+                    <div class="range-slider"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-form__field">
+                <span class="calc-form__field-label">Lock period</span>
+                <div class="calc-form__field-inner">
+                  <span class="calc-form__field-icon">
+                    <svg width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#calendar'></use>
+                    </svg>
+                  </span>
+                  <span class="calc-form__field-value">Days</span>
+                    <div class="range" id="days">
+                      <div class="range__inner">
+                        <input type="number" class="range__value" placeholder="0">
+                      </div>
+                      <div class="range-slider"></div>
+                    </div>
+                </div>
+              </div>
+
+              <button class="calc-form__button btn">Staking ETH</button>
+            </form>
+
+            <div class="calculate__profit">
+              <span class="calculate__profit-heading">Daily profit:</span>
+
+              <div class="calculate__profit-percentage">10%</div>
+
+              <ul class="calculate__profit-details">
+                <li>
+                  <p class="calculate__profit-text">24h profit:</p>
+                  <span class="calculate__profit-value">+1,99.02 ETH</span>
+                </li>
+
+                <li>
+                  <p class="calculate__profit-text">Weekly profit:</p>
+                  <span class="calculate__profit-value">+8,929.02 ETH</span>
+                </li>
+
+                <li>
+                  <p class="calculate__profit-text">Monthly profit:</p>
+                  <span class="calculate__profit-value">+9.975 ETH</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="staking-pools">
+          <h2 class="staking-pools__title">
+            Staking pools:
+
+            <span class="tooltip">
+              <svg class="tooltip__icon" width='24' height='24'>
+                <use href='img/sprite/sprite.svg#tooltip'></use>
+              </svg>
+
+              <span class="tooltip__content">text</span>
+            </span>
+          </h2>
+
+          <ul class="staking-pools__lists">
+            <li>
+              <div class="staking-card">
+                <div class="staking-card__top">
+                  <span class="staking-card__status">Active</span>
+
+                  <div class="crypto">
+                    <div class="crypto__icon">
+                      <picture>
+                        <img width='50' height='50' src='img/crypto/ethereum.svg' alt='ETH'>
+                      </picture>
+                    </div>
+
+                    <div class="crypto__info">
+                      <span class="crypto__abbr">ETH</span>
+                      <p class="crypto__title">Ethereum</p>
+                    </div>
+                  </div>
+
+                  <!-- <div class="staking-card__header-row">
+                    <div class="staking-card__title">ETH</div>
+                    <div class="staking-card__text"></div>
+                  </div> -->
+                </div>
+
+                <div class="staking-card__body">
+                  <div class="staking-card__heading">
+                    <span>Aviable to withdraw</span>
+
+                    <div class="tooltip">
+                      <svg class="tooltip__icon" width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#tooltip'></use>
+                      </svg>
+
+                      <div class="tooltip__content">text</div>
+                    </div>
+                  </div>
+
+                  <div class="staking-card__info">
+                    <div class="staking-card__field staking-card__dividends">
+                      <div class="staking-card__field-icon">
+                        <svg width='24' height='24'>
+                          <use href='img/sprite/sprite.svg#eth'></use>
+                        </svg>
+                      </div>
+                      <input type="text" class="staking-card__field-input">
+
+                      <div class="staking-card__field-currency">~$319.31</div>
+                    </div>
+
+                    <button class="staking-card__claim btn">Claim dividends</button>
+                  </div>
+
+                  <div class="staking-card__details">
+                    <div class="staking-card__detail">
+                      <p class="staking-card__detail-heading">Date:</p>
+
+                      <span class="staking-card__detail-info">24.02.2024</span>
+                    </div>
+
+                    <div class="staking-card__detail">
+                      <p class="staking-card__detail-heading">Invested:</p>
+
+                      <span class="staking-card__detail-info">2.1 ETH</span>
+                    </div>
+
+                    <div class="staking-card__detail">
+                      <p class="staking-card__detail-heading">Paid:</p>
+
+                      <span class="staking-card__detail-info">0.3 ETH</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="staking-card empty">
+                <p class="staking-card__empty">Features deposit</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="staking-card empty">
+                <p class="staking-card__empty">Features deposit</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    @include('partials/footer.html',{})
+  </div>
+
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

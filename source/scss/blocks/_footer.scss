@@ -1,0 +1,119 @@
+footer {
+  position: relative;
+  padding: 28px 0;
+  overflow: hidden;
+
+  @media (max-width:768px) {
+    padding: 0;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width:1024px) {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 18px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    grid-gap: clamp(10px, 1.44vw, 18px);
+  }
+
+  &__app {
+    padding: 14px clamp(14px, 1.68vw, 21px);
+    border-left: 1px solid rgba(69, 81, 148, 0.16);
+    font-size: 16px;
+    line-height: 125%;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: var(--color-blue);
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    grid-gap: 17px;
+
+    a {
+      font-size: 16px;
+      line-height: 125%;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: var(--color-blue);
+      }
+    }
+
+    @media (max-width:1024px) {
+      justify-self: center;
+      transform: none;
+      position: relative;
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+      top: initial;
+      left: initial;
+
+      &::before{
+        position: absolute;
+        content: '';
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
+        border-bottom: 1px solid var(--color-dark);
+        bottom: -9px;
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+
+    a {
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-dark);
+      border-radius: 12px;
+      transition: all 0.4s ease;
+
+      &:hover {
+        background-color: var(--color-blue);
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  @media (max-width:768px) {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+

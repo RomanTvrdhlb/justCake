@@ -1,0 +1,20 @@
+h1, .title {
+  font-size: clamp(50px, 9.766vw, 75px);
+  line-height: 120%;
+  font-weight: 700;
+
+  span {
+    color: var(--color-blue);
+  }
+}
+
+h2, .subtitle {
+  font-size: clamp(45px, 7.161vw, 55px);
+  line-height: 110%;
+  font-weight: 700;
+
+  span {
+    color: var(--color-blue);
+  }
+}
+

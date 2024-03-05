@@ -1,0 +1,131 @@
+.staking-card {
+  min-height: 325px;
+  border-radius: 21px;
+  border: 1px solid transparent;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &.empty {
+    border: 1px solid var(--color-dark);
+
+    @media (max-width: 576px){
+      display: none;
+    }
+  }
+
+  &__empty {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__top {
+    position: relative;
+    width: 100%;
+    padding: 15px 28px;
+    background-color: var(--stroke-input);
+  }
+
+  &__status {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 3px 22.5px;
+    background-color: var(--color-green);
+    border-top-right-radius: 99px;
+    border-bottom-left-radius: 99px;
+    font-size: 12px;
+    line-height: 100%;
+    font-weight: 500;
+    color: #0e1124;
+  }
+
+  &__body {
+    width: 100%;
+    padding: 10px 20px 15px;
+    background: linear-gradient(0, #2365fa 0, rgba(35, 101, 250, 0) 60.63%);
+  }
+
+  &__heading {
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    grid-gap: 5px;
+    font-size: 12px;
+    line-height: 100%;
+    color: var(--color-grey);
+  }
+
+  &__info {
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+  }
+
+  &__detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 100%;
+
+    span {
+      font-weight: 500;
+    }
+
+  }
+}
+
+.staking-card__field {
+  position: relative
+}
+
+.staking-card__field-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 14px;
+  width: 24px
+}
+
+.staking-card__field-input {
+  border-radius: 12px;
+  border: 1px solid #2d366c;
+  background: #0e1124;
+  padding-left: 48px;
+  height: 54px;
+  line-height: 52px;
+  color: var(--color-white);
+  font-family: "BT Beau Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 100%
+}
+
+.staking-card__field-input:focus {
+  outline: 0
+}
+
+.staking-card__field-currency {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
+  color: var(--color-grey);
+  text-align: right;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal
+}

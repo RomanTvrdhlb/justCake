@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="En">
+@include('partials/head.html',{})
+
+<body>
+  <div class="wrapper">
+    @include('partials/header.html',{})
+
+    <main class="main">
+      <div class="container">
+      <section class="hero">
+       <div class="hero__box">
+          <div class="hero__row">
+            <div class="hero__col">
+              <a href="#" class="hero__play play-button">
+                <span class="play-button__icon">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#play'></use>
+                  </svg>
+                </span>
+                <span class="play-button__text">
+                  Watch video about our platform</span>
+              </a>
+
+              <h1 class="hero__title">
+                Decentralized <span>multi-chain</span> staking app
+              </h1>
+
+              <p class="hero__text">
+                Get daily returns of 1-4% with multichain staking
+              </p>
+
+              <a href="#" class="button start-button">
+                Start now
+                <span class="start-button__icon">
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#arrow-right'></use>
+                  </svg>
+                </span>
+              </a>
+            </div>
+            <div class="hero__col">
+              <div class="hero__phone">
+                <picture>
+                  <!-- <source type='image/webp' media='(max-width: 575px)' srcset='img/.webp'>
+                  <source media='(max-width: 575px)' srcset='img/.png'> -->
+                  <source type='image/webp' srcset='img/index/phone.webp'>
+                  <img width='728' height='655' src='img/index/phone.png' alt='image'>
+                </picture>
+              </div>
+            </div>
+          </div>
+          <ul class="benefits-list">
+            <li class="benefits-list__item">
+              <span class="benefits-list__icon">
+                <svg width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#rocket'></use>
+                </svg>
+              </span>
+              <p>High APR of stakings</p>
+            </li>
+            <li class="benefits-list__item">
+              <span class="benefits-list__icon">
+                <svg width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#coins'></use>
+                </svg>
+              </span>
+             <p>Min commission for orders</p>
+            </li>
+            <li class="benefits-list__item">
+              <span class="benefits-list__icon">
+                <svg width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#shield'></use>
+                </svg>
+              </span>
+             <p>Validated smart contract</p>
+            </li>
+            <li class="benefits-list__item">
+              <span class="benefits-list__icon">
+                <svg width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#life-ring'></use>
+                </svg>
+              </span>
+              <p>Technical support 24/7</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="earn">
+        <div class="earn__box">
+          <ul class="earn-list">
+            <li class="earn-list__item">
+              <div class="earn-list__box">
+              <h2 class="earn__title">
+                <span>Earn</span> Crypto Efficiently<span>.</span>
+              </h2>
+              <div class="earn-card">
+                <span class="earn-card__label">Coming soon</span>
+                <div class="earn-card__image">
+                  <picture>
+                    <source type='image/webp' srcset='img/index/img1.webp'>
+                    <img width='224' height='152' src='img/index/img1.png' alt='image'>
+                  </picture>
+                </div>
+                <span class="earn-card__title">
+                  Fixed percentage of profit
+                </span>
+                <p>
+                  The percentage that was originally quoted will not change
+                </p>
+              </div>
+            </div>
+            </li>
+            <li class="earn-list__item">
+              <div class="earn-list__box">
+                <div class="earn-card earn-card--mode">
+                  <span class="earn-card__label">Coming soon</span>
+                  <div class="earn-card__image earn-card__image--invest">
+                    <picture>
+                      <source type='image/webp' srcset='img/index/img2.webp'>
+                      <img width='441' height='431' src='img/index/img2.png' alt='image'>
+                    </picture>
+                  </div>
+                  <span class="earn-card__title">
+                    Reliability of the investment
+                  </span>
+                  <p>
+                    Your funds are stored on the project's smart contract, so no one has access to them
+                  </p>
+                </div>
+                <div class="earn-card earn-card--small coming">
+                  <span class="earn-card__label">Coming soon</span>
+                  <div class="earn-card__image earn-card__image--chain">
+                    <picture>
+                      <source type='image/webp' srcset='img/index/img3.webp'>
+                      <img width='315' height='307' src='img/index/img3.png' alt='image'>
+                    </picture>
+                  </div>
+                  <span class="earn-card__title">
+                    More 8+ blockchains
+                  </span>
+                  <p>
+                    Steaking is available on over 8 different blockchains
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="earn-list__item">
+              <div class="earn-list__box">
+                <div class="earn-card earn-card--small">
+                  <span class="earn-card__label">Coming soon</span>
+                  <div class="earn-card__image earn-card__image--shield">
+                    <picture>
+                      <source type='image/webp' srcset='img/index/img4.webp'>
+                      <img width='336' height='336' src='img/index/img4.png' alt='image'>
+                    </picture>
+                  </div>
+                  <span class="earn-card__title">
+                    High APR
+                  </span>
+                  <p>
+                    Earn the highest possible ROI on your investment
+                  </p>
+                </div>
+                <div class="earn-card">
+                  <span class="earn-card__label">Coming soon</span>
+                  <div class="earn-card__image earn-card__image--smart">
+                    <picture>
+                      <source type='image/webp' srcset='img/index/img5.webp'>
+                      <img width='297' height='134' src='img/index/img5.png' alt='image'>
+                    </picture>
+                  </div>
+                  <span class="earn-card__title">
+                    Smart contract audited
+                  </span>
+                  <p>
+                    Certified smart contract auditing ensures that your funds are protected
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="earn__inner">
+            <h3 class="subtitle">
+              <span>Calculate</span> your profit<span>.</span>
+            </h3>
+          <div class="calculate">
+            <form class="calc-form">
+              <div class="calc-form__title">
+                Add staking position
+
+                <div class="tooltip">
+                  <svg class="tooltip__icon" width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#question'></use>
+                  </svg>
+                  <div class="tooltip__content"></div>
+                </div>
+              </div>
+
+              <div class="calc-form__field">
+                <span class="calc-form__field-label">Stake amount:</span>
+                <div class="calc-form__field-inner">
+                  <span class="calc-form__field-icon">
+                    <svg width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#eth'></use>
+                    </svg>
+                  </span>
+                  <span class="calc-form__field-value">~$319.31</span>
+
+                  <div class="range" id="stake">
+                    <div class="range__inner">
+                      <input type="number" class="range__value" placeholder="0">
+                    </div>
+                    <div class="range-slider"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-form__field">
+                <span class="calc-form__field-label">Lock period</span>
+                <div class="calc-form__field-inner">
+                  <span class="calc-form__field-icon">
+                    <svg width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#calendar'></use>
+                    </svg>
+                  </span>
+                  <span class="calc-form__field-value">Days</span>
+                    <div class="range" id="days">
+                      <div class="range__inner">
+                        <input type="number" class="range__value" placeholder="0">
+                      </div>
+                      <div class="range-slider"></div>
+                    </div>
+                </div>
+              </div>
+
+              <button class="calc-form__button btn">Staking ETH</button>
+            </form>
+
+            <div class="calculate__profit">
+              <span class="calculate__profit-heading">Daily profit:</span>
+
+              <div class="calculate__profit-percentage">10%</div>
+
+              <ul class="calculate__profit-details">
+                <li>
+                  <p class="calculate__profit-text">24h profit:</p>
+                  <span class="calculate__profit-value">+1,99.02 ETH</span>
+                </li>
+
+                <li>
+                  <p class="calculate__profit-text">Weekly profit:</p>
+                  <span class="calculate__profit-value">+8,929.02 ETH</span>
+                </li>
+
+                <li>
+                  <p class="calculate__profit-text">Monthly profit:</p>
+                  <span class="calculate__profit-value">+9.975 ETH</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </section>
+
+      <section class="funds">
+        <div class="funds__box">
+          <div class="funds__inner">
+        <h3 class="subtitle">
+          <span>Allocation</span> of platform funds<span>.</span>
+        </h3>
+
+        <div class="allocation">
+          <div class="allocation__image">
+            <img width='496' height='496' src="/img/sprite/funds.svg" alt="image">
+          </div>
+          <div class="allocation__box">
+            <div class="allocation__inner">
+              <span class="allocation__value allocation__value--green">10%</span>
+              <span class="allocation__title">For developers & marketing</span>
+              <p>10% of the pool is spent on project maintenance by the development team and technical staff and promotion of the platform by media resources</p>
+            </div>
+            <div class="allocation__inner">
+              <span class="allocation__value">90%</span>
+              <span class="allocation__title">Dividend payout to investors</span>
+              <p>90% of the funds from the pool are used to pay dividends to investors</p>
+            </div>
+            <button class="transparent-button">Check smart-contract</button>
+          </div>
+        </div>
+        <div class="drop">
+          <div class="drop__box">
+            <div class="drop__inner">
+              <h4 class="subtitle">justDrop.</h4>
+              <p>Get a chance to be one of the first to get an airdrop.</p>
+            </div>
+       
+            <button class="white-button">Coming soon</button>
+          </div>
+
+          <div class="drop__image">
+            <picture>
+              <source type='image/webp' srcset='img/index/drop.webp'>
+              <img width='638' height='406' src='img/index/drop.png' alt='image'>
+            </picture>
+          </div>
+        </div>
+      </div>
+
+      </div>
+      </section>
+
+    </div>
+    </main>
+
+    @include('partials/footer.html',{})
+  </div>
+
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

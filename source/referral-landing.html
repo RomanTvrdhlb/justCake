@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="En">
+@include('partials/head.html',{})
+
+<body>
+  <div class="wrapper">
+    @include('partials/header.html',{})
+
+    <main class="main">
+      <div class="container">
+        <section class="referral">
+          <div class="breadcrumbs">
+            <div class="breadcrumbs__wrapp">
+              <a class="breadcrumbs__prev" href="/">Home</a>
+              <span class="breadcrumbs__current">Referral program</span>
+            </div>
+          </div>
+
+          <div class="referral__info">
+            <h1 class="referral__title">
+              Referr friends Receive <span>up to 5%</span> of their deposit<span>.</span>
+            </h1>
+
+            <p class="referral__descr">Invite your friends and get rewards from their deposit!</p>
+
+            <a class="referral__btn btn" href="#" >
+              <span class="button__text">Start now</span>
+
+              <svg width='69' height='48'>
+                <use href='img/sprite/sprite.svg#button'></use>
+              </svg>
+            </a>
+          </div>
+
+          <div class="referral__bg">
+            <picture>
+              <source type='image/webp' srcset='img/referral-bg.webp'>
+              <img width='722' height='751' src='img/referral-bg.png' alt='Referrals'>
+            </picture>
+          </div>
+
+          <ul class="referral__totals ref-section__list">
+            <li class="referral__total ref-section__item">
+              <div class="referral__total-heading ref-section__item-tille">Total referrals</div>
+              <div class="referral__total-value ref-section__item-value">12,899</div>
+            </li>
+            <li class="referral__total ref-section__item">
+              <div class="referral__total-heading ref-section__item-tille">Total paid</div>
+              <div class="referral__total-value ref-section__item-value">$12,847</div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="steps">
+            <h2 class="steps__title">
+              How To Refer Your Friends<span>.</span>
+            </h2>
+
+            <ul class="steps__list">
+              <li class="steps__list-item">
+                <span class="steps__list-counter">01</span>
+                <p class="steps__list-descr">
+                  Copy a your referral link
+                </p>
+              </li>
+              <li class="steps__list-item">
+                <span class="steps__list-counter">02</span>
+                <p class="steps__list-descr">
+                  Invite your friends via your referral link
+                </p>
+              </li>
+              <li class="steps__list-item">
+                <span class="steps__list-counter">03</span>
+                <p class="steps__list-descr">
+                  Receive referral rewards in ETH
+                </p>
+              </li>
+            </ul>
+        </section>
+
+        <section class="faq">
+          <h2 class="faq__title">
+            How To Refer Your Friends<span>.</span>
+          </h2>
+
+          <div class="faq__lists">
+            <ul class="faq__questions" data-spollers data-one-spoller>
+              <li class="faq__questions-item">
+                <button class="faq__question h2" tabindex="-1" type="button" data-spoller>
+                  <span>How does the referral program work?</span>
+
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#plus'></use>
+                  </svg>
+                </button>
+
+                <div class="faq__answer">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </li>
+
+              <li class="faq__questions-item">
+                <button class="faq__question h2" tabindex="-1" type="button" data-spoller>
+                  <span>Can I receive promotional materials?</span>
+
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#plus'></use>
+                  </svg>
+                </button>
+
+                <div class="faq__answer">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </li>
+
+              <li class="faq__questions-item">
+                <button class="faq__question h2" tabindex="-1" type="button" data-spoller>
+                  <span>How to view the stats of my referral?</span>
+
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#plus'></use>
+                  </svg>
+                </button>
+
+                <div class="faq__answer">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </li>
+            </ul>
+
+            <ul class="faq__questions" data-spollers data-one-spoller>
+              <li class="faq__questions-item">
+                <button class="faq__question h2" tabindex="-1" type="button" data-spoller>
+                  <span>How does the referral program work?</span>
+
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#plus'></use>
+                  </svg>
+                </button>
+
+                <div class="faq__answer">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </li>
+
+              <li class="faq__questions-item">
+                <button class="faq__question h2" tabindex="-1" type="button" data-spoller>
+                  <span>Can I receive promotional materials?</span>
+
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#plus'></use>
+                  </svg>
+                </button>
+
+                <div class="faq__answer">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </li>
+
+              <li class="faq__questions-item">
+                <button class="faq__question h2" tabindex="-1" type="button" data-spoller>
+                  <span>How to view the stats of my referral?</span>
+
+                  <svg width='24' height='24'>
+                    <use href='img/sprite/sprite.svg#plus'></use>
+                  </svg>
+                </button>
+
+                <div class="faq__answer">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    @include('partials/footer.html',{})
+  </div>
+
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

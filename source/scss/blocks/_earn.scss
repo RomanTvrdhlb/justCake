@@ -1,0 +1,35 @@
+.earn {
+  padding-bottom: clamp(55px, 6.4957vw, 76px);
+  position: relative;
+
+  @media (min-width: 768px) {
+    padding-top: clamp(65px, 8.1197vw, 95px);
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100vw;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1512' height='840' fill='none'%3E%3Cpath fill='url(%23paint0_linear_134_1490)' d='M0 0h1513v840H0z'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_134_1490' x1='756.5' x2='756.5' y1='0' y2='840' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23121631'/%3E%3Cstop offset='1' stop-color='%23121631' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: repeat-x;
+
+      height: Min(71.7949vw, 840px);
+      z-index: -1;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(70px, 6.3248vw, 74px);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(36px, 3.2479vw, 38px);
+  }
+}

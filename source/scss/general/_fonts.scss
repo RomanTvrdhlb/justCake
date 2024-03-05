@@ -1,0 +1,21 @@
+@mixin font-face($font-family, $url, $weight, $style) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url('../fonts/#{$url}.woff2') format("woff2"),
+         url('../fonts/#{$url}.woff') format("woff");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: $style;
+  }
+}
+
+@include font-face("BT-BeauSans", "../fonts/BT-BeauSans-Regular", 400, normal);
+@include font-face("BT-BeauSans", "../fonts/BT-BeauSans-Medium", 500, normal);
+@include font-face("BT-BeauSans", "../fonts/BT-BeauSans-Bold", 700, normal);
+@include font-face("BT-BeauSans", "../fonts/BT-BeauSans-ExtraBold", 800, normal);
+
+@include font-face("MazzardH", "../fonts/MazzardH-Medium", 500, normal);
+
+
+
+

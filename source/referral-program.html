@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="En">
+@include('partials/head.html',{})
+
+<body>
+  <div class="wrapper">
+    @include('partials/header.html',{})
+
+    <main class="main">
+      <div class="container">
+        <section class="program">
+          <div class="rewards">
+            <span class="rewards__promo">EARN UP TO 5%</span>
+
+            <div class="rewards__top">
+              <div class="rewards__heading">My referral rewards</div>
+
+              <a class="rewards__more" href="#">
+                More details
+
+                <svg width='24' height='24'>
+                  <use href='img/sprite/sprite.svg#angle-right'></use>
+                </svg>
+              </a>
+            </div>
+
+            <ul class="rewards__details">
+              <li class="rewards__detail">
+                <div class="rewards__detail-title">
+                  <span>Total referrals</span>
+
+                  <div class="tooltip">
+                    <svg class="tooltip__icon" width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#tooltip'></use>
+                    </svg>
+
+                    <div class="tooltip__content">text</div>
+                  </div>
+                </div>
+
+                <span class="rewards__detail-value">0 ETH</span>
+              </li>
+              <li class="rewards__detail">
+                <div class="rewards__detail-title">
+                  <span>Total profit</span>
+
+                  <div class="tooltip">
+                    <svg class="tooltip__icon" width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#tooltip'></use>
+                    </svg>
+
+                    <div class="tooltip__content">text</div>
+                  </div>
+                </div>
+
+                <span class="earnings__detail-value">0 ETH</span>
+              </li>
+              <li class="earnings__detail">
+                <div class="rewards__detail-title">
+                  <span>Aviable for claim</span>
+
+                  <div class="tooltip">
+                    <svg class="tooltip__icon" width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#tooltip'></use>
+                    </svg>
+
+                    <div class="tooltip__content">text</div>
+                  </div>
+                </div>
+
+                <span class="rewards__detail-value">0 ETH</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="profit">
+            <div class="profit__heading">My profit</div>
+
+            <ul class="profit__details">
+              <li>
+                <div class="profit__detail">
+                  <div class="rewards__detail-title">
+                    <span>Aviable</span>
+
+                    <div class="tooltip">
+                      <svg class="tooltip__icon" width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#tooltip'></use>
+                      </svg>
+
+                      <div class="tooltip__content">text</div>
+                    </div>
+                  </div>
+
+                  <span class="rewards__detail-value">0 ETH</span>
+                </div>
+              </li>
+              <li>
+                <button class="profit__withdraw btn">Withdraw</button>
+              </li>
+              <li>
+                <div class="profit__detail">
+                  <div class="rewards__detail-title">
+                    <span>You recive</span>
+
+                    <div class="tooltip">
+                      <svg class="tooltip__icon" width='24' height='24'>
+                        <use href='img/sprite/sprite.svg#tooltip'></use>
+                      </svg>
+
+                      <div class="tooltip__content">text</div>
+                    </div>
+                  </div>
+
+                  <span class="rewards__detail-value">10%</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="referral-link">
+            <div class="referral-link__heading">You referral link</div>
+
+            <form class="referral-link__code" action="#">
+              <div class="referral-link__details">
+                <input class="referral-link__info" type="text" value="juststake.com/ref=1203983vGb-e3jjm">
+                <button class="referral-link__btn btn">Copy link</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="promo">
+            <div class="promo__bg">
+              <picture>
+                <source type='image/webp' media='(max-width: 575px)' srcset='img/promo-bgMob.webp'>
+                <source media='(max-width: 575px)' srcset='img/promo-bgMob.png'>
+                <source type='image/webp' srcset='img/promo-bg.webp'>
+                <img width='289' height='282' src='img/promo-bg.png' alt='Earn UP to 5%'>
+              </picture>
+            </div>
+
+            <p class="promo__heading">EARN UP</p>
+            <span class="promo__title">UP TO <span>5%</span></span>
+          </div>
+        </section>
+
+        <section class="history">
+          <div class="history__title">History</div>
+
+          <ul class="history__table">
+            <li class="history__table-thead">
+              <div class="history__table-head date">Date</div>
+              <div class="history__table-head user">User</div>
+              <div class="history__table-head deposit">Deposit</div>
+              <div class="history__table-head bonus"><span>Referral</span> bonus</div>
+              <div class="history__table-head status">Status</div>
+            </li>
+            <li class="history__table-tbody">
+              <div class="history__table-row data">15.02.2024 <span>/ 13:09</span></div>
+              <div class="history__table-row user">0xBS..SnS21</div>
+              <div class="history__table-row deposit">
+                <div class="crypto__icon">
+                  <picture>
+                    <img width='24' height='24' src='img/crypto/ethereum.svg' alt='ethereum'>
+                  </picture>
+                </div>
+                <span>0.1 ETH</span>
+              </div>
+              <div class="history__table-row bonus">
+                <div class="crypto__icon">
+                  <picture>
+                    <img width='24' height='24' src='img/crypto/ethereum.svg' alt='ethereum'>
+                  </picture>
+                </div>
+                <span>0.021 ETH</span>
+              </div>
+              <div class="history__table-row status">
+                <svg width='15' height='16'>
+                  <use href='img/sprite/sprite.svg#success'></use>
+                </svg>
+                <span>Sucesfull</span>
+              </div>
+            </li>
+            <li class="history__table-tbody">
+              <div class="history__table-row data">15.02.2024 <span>/ 13:09</span></div>
+              <div class="history__table-row user">0xBS..SnS21</div>
+              <div class="history__table-row deposit">
+                <div class="crypto__icon">
+                  <picture>
+                    <img width='24' height='24' src='img/crypto/ethereum.svg' alt='ethereum'>
+                  </picture>
+                </div>
+                <span>0.1 ETH</span>
+              </div>
+              <div class="history__table-row bonus">
+                <div class="crypto__icon">
+                  <picture>
+                    <img width='24' height='24' src='img/crypto/ethereum.svg' alt='ethereum'>
+                  </picture>
+                </div>
+                <span>0.021 ETH</span>
+              </div>
+              <div class="history__table-row status">
+                <svg width='15' height='16'>
+                  <use href='img/sprite/sprite.svg#success'></use>
+                </svg>
+                <span>Sucesfull</span>
+              </div>
+            </li>
+            <li class="history__table-tbody">
+              <div class="history__table-row data">15.02.2024 <span>/ 13:09</span></div>
+              <div class="history__table-row user">0xBS..SnS21</div>
+              <div class="history__table-row deposit">
+                <div class="crypto__icon">
+                  <picture>
+                    <img width='24' height='24' src='img/crypto/ethereum.svg' alt='ethereum'>
+                  </picture>
+                </div>
+                <span>0.1 ETH</span>
+              </div>
+              <div class="history__table-row bonus">
+                <div class="crypto__icon">
+                  <picture>
+                    <img width='24' height='24' src='img/crypto/ethereum.svg' alt='ethereum'>
+                  </picture>
+                </div>
+                <span>0.021 ETH</span>
+              </div>
+              <div class="history__table-row status">
+                <svg width='15' height='16'>
+                  <use href='img/sprite/sprite.svg#success'></use>
+                </svg>
+                <span>Sucesfull</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    @include('partials/footer.html',{})
+  </div>
+
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
