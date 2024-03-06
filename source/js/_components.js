@@ -7,6 +7,7 @@ import './components/spollers.js';
 // import './components/seoBlock.js';
 import './components/copy.js';
 import './components/range.js';
+import './components/tooltip.js';
 
 
 

@@ -32,4 +32,10 @@
     flex-direction: column;
     grid-gap: clamp(36px, 3.2479vw, 38px);
   }
+
+  &__title{
+    @media (max-width: 768px){
+      margin-bottom: 28px;
+    }
+  }
 }

@@ -18,3 +18,73 @@ h2, .subtitle {
   }
 }
 
+.tooltip {
+  position: relative;
+  display: flex;
+
+
+  &:hover{
+    .tooltip__content{
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  &.active{
+    .tooltip__content{
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  &__icon{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  &__content{
+    position: absolute;
+    top: -10px;
+    transform: translate(50%, -100%);
+    right: 50%;
+    border: solid 1px var(--border);
+    border-radius: 6px;
+    padding: 5px 8px;
+    display: flex;
+    background-color: var(--color-dark-blue);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 20;
+    font-family: var(--font-family-beausans);
+    font-size: 14px;
+    line-height: 100%;
+    font-weight: 500;
+    color: var(--color-grey);
+  
+    &::after{
+      position: absolute;
+      content: '';
+      width: 24px;
+      height: 24px;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 80%);
+      opacity: 0;
+    }
+  
+    &::before{
+      position: absolute;
+      content: '';
+      left: 50%;
+      bottom: -8px;
+      transform: translateX(-50%) rotate(-90deg);
+      width: 0;
+      height: 0;
+      border-top: 5px solid transparent;
+      border-right: 6px solid var(--border);
+      border-bottom: 5px solid transparent;
+      pointer-events: none;
+    }
+  }
+}

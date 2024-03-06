@@ -48,24 +48,6 @@
   }
 }
 
-.tooltip {
-  position: relative;
-  display: flex
-}
-
-.tooltip__icon {
-  width: 24px;
-  height: 24px
-}
-
-.tooltip__content {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  opacity: 0;
-  pointer-events: none
-}
-
 .card {
   border-radius: 21px;
   background: linear-gradient(180deg, #151a37 0, rgba(21, 26, 55, 0) 100%);
