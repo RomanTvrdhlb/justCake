@@ -58,6 +58,9 @@
   }
 
   .subtitle{
+    @media (min-width: 1024px){
+        overflow: hidden;
+    }
     @media (max-width: 1024px) {
       max-width: clamp(354px, 55.762vw, 571px);
     }

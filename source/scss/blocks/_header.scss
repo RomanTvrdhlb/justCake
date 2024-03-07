@@ -35,6 +35,17 @@ header {
       }
     }
 
+    @media (min-width: 1024px){
+      overflow: hidden;
+      li{
+        overflow: hidden;
+
+        a{
+          transform: translateY(100%)
+        }
+      }
+    }
+
     @media (max-width: 1024px){
       display: none;
   }
@@ -127,4 +138,16 @@ header {
   }
 }
 
+@media (min-width: 1024px){
+
+  .header__logo{
+    opacity: 0;
+    transform: translate(-20px);
+  }
+
+  .header__btn{
+  opacity: 0;
+  transform: translate(20px);
+}
+}
 

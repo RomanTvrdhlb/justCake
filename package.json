@@ -57,6 +57,7 @@
   "dependencies": {
     "@popperjs/core": "^2.11.2",
     "aos": "^2.3.4",
+    "gsap": "^3.12.5",
     "gulp-rename": "^2.0.0",
     "gulp-svgstore": "^9.0.0",
     "gulp-to-ico": "^1.0.0",

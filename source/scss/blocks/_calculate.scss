@@ -4,8 +4,22 @@
   grid-template-columns: 1fr clamp(460px, 39.76vw, 497px);
   grid-gap: clamp(22px, 2.16vw, 27px);
   padding: 30px 25px 30px 40px;
-  background-color: var(--color-dark);
   border-radius: 21px;
+  position: relative;
+  z-index: 2;
+
+  &::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background-color: var(--color-dark);
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 21px;
+  }
 
   @media (max-width:1024px) {
     grid-template-columns: 1fr 350px;
@@ -17,6 +31,7 @@
   }
 
   &__profit {
+    z-index: 1;
     padding: clamp(18px, 2.24vw, 28px) clamp(22px, 3.68vw, 46px) 29px;
     display: flex;
     flex-direction: column;
@@ -93,7 +108,9 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 10px
+  margin-bottom: 10px;
+
+
 }
 
 .calc-form__field {
@@ -109,7 +126,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin-bottom: 5px
+  margin-bottom: 5px;
 }
 
 .calc-form__field-inner {
@@ -149,6 +166,15 @@
   width: 100%;
   margin-top: 10px
 }
+.calc-form{
+  z-index: 1;
+
+  @media (min-width:1024px) {
+    .line{
+      overflow: hidden;
+    }
+  }
+}
 
 @media (min-width:576px) {
   .calc-form {
@@ -168,6 +194,7 @@
 
 @media (min-width:768px) {
   .calc-form {
+    
       display: block
   }
 }

@@ -8,6 +8,7 @@ import './components/spollers.js';
 import './components/copy.js';
 import './components/range.js';
 import './components/tooltip.js';
+import './components/animations.js';
 
 
 

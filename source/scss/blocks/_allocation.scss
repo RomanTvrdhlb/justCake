@@ -140,6 +140,8 @@
     font-size: 14px;
     line-height: 150%;
     color: var(--color-grey);
+
+     
   }
 
   .transparent-button{
@@ -150,5 +152,16 @@
     @media (max-width: 576px) {
         width: 100%;
     }
+    @media (min-width: 1024px){
+      opacity: 0;
+      width: 0;
+      font-size: 0;
   }
+  }
+
+  @media (min-width: 1024px){
+    .line{
+    overflow: hidden;
+  }
+}
 }

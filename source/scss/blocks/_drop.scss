@@ -69,13 +69,31 @@
         font-size: 14px;
         line-height: 150%;
         color: var(--color-white);
+
+        @media (min-width: 1200px){
+            .line{
+                overflow: hidden;
+            }
+        }
     }
 
     .subtitle{
         line-height: 127%;
+
+        @media (min-width: 1200px){
+            overflow: hidden;
+            padding-left: 3px;
+        }
     }
 
     .white-button{
+       
+        @media (min-width: 1024px){
+            opacity: 0;
+            width: 0;
+            font-size: 0;
+        }
+     
         @media (max-width: 576px){
             width: 100%;
         }
