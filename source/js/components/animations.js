@@ -511,6 +511,7 @@ if (window.innerWidth > 1024) {
     });
   }
 
+  
   if (footer) {
     const footerLogo = footer.querySelector(".logo svg"),
       footerSocials = footer.querySelectorAll(".footer__socials a"),
