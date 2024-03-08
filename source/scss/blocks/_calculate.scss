@@ -8,10 +8,9 @@
   position: relative;
   z-index: 2;
 
-  &::before{
-    content: '';
+  &:before {
+    content: "";
     position: absolute;
-    z-index: -1;
     background-color: var(--color-dark);
     z-index: 0;
     width: 100%;
@@ -53,6 +52,10 @@
       line-height: 100%;
       font-weight: 400;
       color: var(--color-grey);
+
+       @media (min-width:1024px) {
+    overflow: hidden;
+       }
     }
 
     &-percentage {
@@ -60,6 +63,10 @@
       line-height: 100%;
       font-weight: 800;
       color: var(--color-blue);
+
+      @media (min-width:1024px) {
+        overflow: hidden;
+      }
     }
 
     &-details {
@@ -89,12 +96,20 @@
       font-size: 14px;
       line-height: 100%;
       color: var(--color-grey);
+
+      @media (min-width:1024px) {
+        overflow: hidden;
+      }
     }
 
     &-value {
       font-size: 16px;
       line-height: 100%;
       font-weight: 700;
+
+      @media (min-width:1024px) {
+        overflow: hidden;
+      }
     }
   }
 }
@@ -110,7 +125,13 @@
   gap: 10px;
   margin-bottom: 10px;
 
-
+  @media (min-width:1024px) {
+    .line{
+      &:nth-child(2){
+        overflow: initial;
+      }
+    }
+  }
 }
 
 .calc-form__field {
@@ -130,7 +151,16 @@
 }
 
 .calc-form__field-inner {
-  position: relative
+  position: relative;
+
+  @media (min-width:1024px) {
+    overflow: hidden;
+    
+
+    .range{
+      margin-bottom: 11px;
+    }
+  }
 }
 
 .calc-form__field-icon {
@@ -141,6 +171,11 @@
   width: 24px;
   height: 24px;
   z-index: 3;
+
+  @media (min-width:1024px) {
+    overflow: hidden;
+    transform: translateY(-75%);
+  }
 }
 
 .calc-form__field-value {
@@ -155,6 +190,11 @@
   font-weight: 400;
   line-height: normal;
   z-index: 3;
+
+  @media (min-width:1024px) {
+    overflow: hidden;
+    transform: translateY(-75%);
+  }
 }
 
 .calc-form__button {
@@ -164,7 +204,20 @@
   border-radius: 12px;
   padding: 0;
   width: 100%;
-  margin-top: 10px
+  margin-top: 10px;
+
+  @media (min-width:1024px) {
+    align-self: center;
+    width: 0;
+    height: 0;
+    font-size: 0;
+  }
+ 
+  &:hover{
+    transform: scaleX(1.015);
+    background-color: var(--color-blue);
+    color: var(--color-white);
+  }
 }
 .calc-form{
   z-index: 1;
@@ -173,6 +226,7 @@
     .line{
       overflow: hidden;
     }
+    min-height: 334px;
   }
 }
 
@@ -194,7 +248,7 @@
 
 @media (min-width:768px) {
   .calc-form {
-    
-      display: block
+    display: flex;
+    flex-direction: column;
   }
 }

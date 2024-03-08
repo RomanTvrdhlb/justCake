@@ -12,7 +12,8 @@ const hero = document.querySelector(".hero"),
   earn = document.querySelector(".earn"),
   funds = document.querySelector(".funds"),
   drop = document.querySelector(".drop"),
-  footer = document.querySelector(".footer");
+  footer = document.querySelector(".footer"),
+  header = document.querySelector(".header");
 
 if (window.innerWidth > 1024) {
   if (hero) {
@@ -94,25 +95,28 @@ if (window.innerWidth > 1024) {
           stagger: 0.01,
         },
         "<"
-      );
-
-    gsap.timeline().from(heroButton, {
-      opacity: 0,
-      scaleX: 0,
-      duration: 0.5,
-    });
-    gsap.timeline().from(heroProfit, {
-      opacity: 0,
-      scale: 0,
-      duration: 1,
-    });
-    gsap.timeline().from(heroProfitBtn, {
-      opacity: 0,
-      scaleX: 0,
-      duration: 0.5,
-    });
+      )
+      .from(heroProfitBtn, {
+        opacity: 0,
+        scaleX: 0,
+        duration: 0.5,
+      },0)
+      .from(heroProfit, {
+        opacity: 0,
+        scale: 0,
+        duration: 1,
+      },0)
+      .to(heroButton, {
+        opacity: 1,
+        fontSize:16,
+        width: 'fit-content',
+        padding:'14px 23px 14px 86px',
+        height:76,
+        duration: 0.2,
+      },0.25);  
   }
 
+  if(header){
   const headerLogo = document.querySelector(".header__logo"),
     headerNav = document.querySelector(".header__menu"),
     headerNavLinks = document.querySelectorAll(".header__menu a"),
@@ -147,6 +151,7 @@ if (window.innerWidth > 1024) {
       },
       "<+=0.25"
     );
+  }
 
   if (earn) {
     ///earn-list && title--------------------------------------
@@ -156,7 +161,7 @@ if (window.innerWidth > 1024) {
       cardImages = earn.querySelectorAll(".earn-card__image"),
       title = earn.querySelector(".earn__title"),
       titleSplit = new SplitText(title, {
-        type: "lines, words",
+        type: "words",
         linesClass: "line",
       }),
       textSplitArray = Array.from(textElements).map((textElement) => {
@@ -245,8 +250,15 @@ if (window.innerWidth > 1024) {
       calcProfit = earn.querySelector('.calculate__profit'),
       calcTitle = earn.querySelector('.calc-form__title'),
       tooltip = earn.querySelector('.calc-form__title .tooltip'),
-      calcFields = earn.querySelectorAll('.calc-form__field'),
+      calcFieldIcons = earn.querySelectorAll('.calc-form__field-icon svg'),
+      calcFieldTitles = earn.querySelectorAll('.calc-form__field-value'),
+      calcInputs = earn.querySelectorAll('.range__value'),
+      calcRanges = earn.querySelectorAll('.range'),
+      calcRangeSliders = earn.querySelectorAll('.range-slider'),
       calcLabel = earn.querySelectorAll('.calc-form__field-label'),
+      profitTitle = earn.querySelector('.calculate__profit-heading'),
+      profitPercent = earn.querySelector('.calculate__profit-percentage'),
+      calcBtn = earn.querySelector('.calc-form__button'),
 
       calcLabelSplit = new SplitText(calcLabel, {
         type: "lines, words",
@@ -258,17 +270,46 @@ if (window.innerWidth > 1024) {
         linesClass: "line",
       }),
 
-      subtitleSplit = new SplitText(subtitle, {
-        type: "lines, words",
+      calcFieldSplit = new SplitText(calcFieldTitles, {
+        type: "words",
         linesClass: "line",
       }),
+
+      profitTitleSplit = new SplitText(profitTitle, {
+        type: "words",
+        linesClass: "line",
+      }),
+
+      profitPercentSplit = new SplitText(profitPercent, {
+        type: "words",
+        linesClass: "line",
+      }),
+
+      subtitleSplit = new SplitText(subtitle, {
+        type: "words",
+        linesClass: "line",
+      }),
+
       calcTl = gsap.timeline({
         scrollTrigger: {
           trigger: earn.querySelector(".earn__inner"),
-          start: "top 70%",
+          start: "top 50%",
           toggleActions: "play none none reverse",
         },
-      });
+      }),
+      
+      //---animation default settings------------
+        animationCalc = {
+          y: 40,
+          opacity: 0,
+          duration: .6,
+        },
+        animationText = {
+          y: 40,
+          opacity: 0,
+          duration: .5,
+        };
+
       calcTl.from(subtitleSplit.words, {
         y: 100,
         opacity: 0,
@@ -284,12 +325,42 @@ if (window.innerWidth > 1024) {
           },
           duration: .8,
         }, 0);
+
+        calcTl.to(calcBtn, {
+          width: '100%',
+          height: 54,
+          fontSize:12,
+          opacity: 1,
+          duration: 0.3
+        }, 1.25)
         
         calcTl.from(calcProfit,{
           height:0,
           opacity:0,
           duration: 0.8,
-        },0.5);
+        },0.5)
+        calcTl.from(profitTitleSplit.words,{
+          ...animationText  
+        }, 1)
+        calcTl.from(profitPercentSplit.words,{
+          ...animationText
+        }, 1.2);
+
+        gsap.utils.toArray(".calculate__profit-details li").forEach((item, index) => {
+          const text = item.querySelector(".calculate__profit-text"),
+            value = item.querySelector(".calculate__profit-value"),
+            textSplit = new SplitText(text, { type: "words", linesClass: "line" }),
+            valueSplit = new SplitText(value, { type: "words", linesClass: "line" });
+    
+            calcTl.from(textSplit.words, {
+              ...animationText,
+              delay: 0.1 * index,
+            }, 1.2)
+            .from(valueSplit.words, {
+              ...animationText,
+              delay: 0.1 * index,
+            }, 1.2);
+        });
         
         calcTl.from(calcTitleSplit.words, {
           y: 100,
@@ -298,9 +369,9 @@ if (window.innerWidth > 1024) {
           stagger: 0.1,
         },0)
         .from(tooltip,{
-          y: 40,
+          y: 20,
           opacity: 0,
-          duration: 1,
+          duration: .5,
         }, .6);
 
         calcTl.from(calcLabelSplit.words, {
@@ -308,9 +379,26 @@ if (window.innerWidth > 1024) {
           opacity: 0,
           duration: 1,
           stagger: 0.1,
-        },0.5)
-
-      
+        },0.5);
+        calcTl.from(calcRanges,{
+          y: 40,
+          opacity: 0,
+          duration: .5,
+        }, 1);
+        calcTl.from(calcFieldIcons,{
+          ...animationCalc,
+        },1.5);
+        calcTl.from(calcFieldSplit.words,{
+          ...animationCalc,
+        }, 1.5);
+        calcTl.from(calcInputs,{
+          ...animationCalc,
+        }, 1.5);
+        calcTl.from(calcRangeSliders,{
+          x: -40,
+          opacity: 0,
+          duration: .6,
+        }, 1.5);   
   }
 
   if (funds) {
@@ -429,14 +517,15 @@ if (window.innerWidth > 1024) {
           stagger: 0.1,
         },
         0.8
-      );
-    gsap.timeline().to(fundsButton, {
+      )
+    .to(fundsButton, {
       opacity: 1,
       width: "clamp(252px, 24.2735vw, 284px)",
-      duration: 0.2,
+      height: 76,
+      duration: 0.3,
       fontSize: 16,
-      delay: 0.8,
-    });
+    },0.8);
+
   }
 
   if (drop) {
@@ -501,14 +590,14 @@ if (window.innerWidth > 1024) {
           stagger: 0.1,
         },
         0.5
-      );
-    gsap.timeline().to(dropButton, {
+      )
+    .to(dropButton, {
       opacity: 1,
       width: "clamp(252px, 24.2735vw, 284px)",
-      duration: 0.2,
+      height: 76,
+      duration: 0.3,
       fontSize: 16,
-      delay: 0.8,
-    });
+    },0.8);
   }
 
   if (footer) {
@@ -524,8 +613,8 @@ if (window.innerWidth > 1024) {
     gsap
       .timeline({
         scrollTrigger: {
-          trigger: drop,
-          start: "top 80%",
+          trigger: footer,
+          start: "bottom 70%",
           toggleActions: "play none none reverse",
         },
       })
