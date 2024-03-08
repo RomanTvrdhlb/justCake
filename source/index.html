@@ -286,9 +286,9 @@
         <h3 class="subtitle">
           <span>Allocation</span> of platform funds<span>.</span>
         </h3>
-
         <div class="allocation">
           <div class="allocation__image">
+            <div class="allocation__animation" id="allocation-lottie"></div>
             <img width='496' height='496' src="/img/sprite/funds.svg" alt="image">
           </div>
           <div class="allocation__box">
@@ -332,7 +332,9 @@
 
     @include('partials/footer.html',{})
   </div>
-
+  <div class="preloader">
+    <div id="loader"></div>
+  </div>
   <script src="js/main.js"></script>
 </body>
 

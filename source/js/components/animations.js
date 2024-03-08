@@ -1,4 +1,5 @@
 import { gsap } from "gsap";
+import lottie from 'lottie-web';
 
 import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,6 +15,23 @@ const hero = document.querySelector(".hero"),
   drop = document.querySelector(".drop"),
   footer = document.querySelector(".footer"),
   header = document.querySelector(".header");
+
+const animationData = require('./../pie.json');
+let animationInitialized = false;
+
+const pieOptions = {
+    container: document.getElementById('allocation-lottie'),
+    renderer: 'svg',
+    loop: false,
+    autoplay: true,
+    animationData: animationData,
+};
+
+function initAnimation(options){
+  const item = lottie.loadAnimation(options);
+}
+
+
 
 if (window.innerWidth > 1024) {
   if (hero) {
@@ -179,7 +197,7 @@ if (window.innerWidth > 1024) {
       timeLine = gsap.timeline({
         scrollTrigger: {
           trigger: earn,
-          start: "top 70%",
+          start: "top 60%",
           toggleActions: "play none none reverse",
         },
       });
@@ -434,9 +452,18 @@ if (window.innerWidth > 1024) {
       .timeline({
         scrollTrigger: {
           trigger: funds,
-          start: "top 70%",
+          start: "top 60%",
           toggleActions: "play none none reverse",
-        },
+
+          onEnter: function () {
+            if (!animationInitialized) {
+              gsap.delayedCall(0.5, function () {
+                initAnimation(pieOptions);
+                animationInitialized = true;
+              });
+            }
+          },
+      },
       })
       .from(
         fundsBgAfter,
@@ -452,8 +479,8 @@ if (window.innerWidth > 1024) {
       .from(
         fundsBgImg,
         {
+          x:20,
           opacity: 0,
-          x: 20,
           duration: 1,
         },
         0.5
@@ -525,7 +552,6 @@ if (window.innerWidth > 1024) {
       duration: 0.3,
       fontSize: 16,
     },0.8);
-
   }
 
   if (drop) {
@@ -547,7 +573,7 @@ if (window.innerWidth > 1024) {
       .timeline({
         scrollTrigger: {
           trigger: drop,
-          start: "top 70%",
+          start: "top 60%",
           toggleActions: "play none none reverse",
         },
       })

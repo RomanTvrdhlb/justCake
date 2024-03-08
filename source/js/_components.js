@@ -9,6 +9,7 @@ import './components/copy.js';
 import './components/range.js';
 import './components/tooltip.js';
 import './components/animations.js';
+import './components/preloader.js';
 
 
 

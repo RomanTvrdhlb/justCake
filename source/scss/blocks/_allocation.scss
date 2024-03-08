@@ -23,6 +23,20 @@
     }
   }
 
+  &__animation{
+    width:  clamp(1412px, 116.3077vw,1512px);
+    height: clamp(862px, 74vw, 962px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+
+    @media (max-width: 1024px){
+      display: none;
+    }
+  }
+
   &__image {
     width: clamp(275px, 42.3932vw, 496px);
     height: clamp(275px, 42.3932vw, 496px);
@@ -34,6 +48,10 @@
         right: 0;
         top: 50%;
         transform: translateY(-54%);
+
+        img{
+          display: none;
+        }
     }
 
     img {
